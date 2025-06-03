@@ -20,3 +20,12 @@ Typescript is an OOP language built on JS with extra features.
 Say, ts file name is "index.ts"
 - **Running ts file using node:** ```node index.ts```
 - **converting ts file to js:** ```tsc index.ts```
+
+*Ts and js files are not kept in the same folder. So, configure ts:*
+- **configure ts:** ```tsc --init``` and a configuration file ```tsconfig.json``` will open in the root directory.
+- Press ctrl+f and search ```rootDir```, uncomment it and write the directory where ts file should be saved.
+For example:  ```"rootDir": "./module1/src/",```
+- Press ctrl+f and search ```outDir``` and give the location where ts file will be compiled into js file and be saved. For example:
+  ```"outDir": "./module1/dist",```
+Here, ```dist``` is *distributor* file.
+- Now go to the root directory and give command ```tsc```, *index.js* file will be created in *./module1/dist* directory if ran successfully.

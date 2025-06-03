@@ -14,3 +14,9 @@ Typescript is an OOP language built on JS with extra features.
 - **Limited Library support**
 - **Over engineering**
 - **Migration challenges**
+
+
+# Program
+Say, ts file name is "index.ts"
+- **Running ts file using node:** ```node index.ts```
+- **converting ts file to js:** ```tsc index.ts```

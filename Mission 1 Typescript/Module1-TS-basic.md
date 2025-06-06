@@ -123,7 +123,7 @@ or,
 }
 ```
 ### Declaring optional member
-**Use ``?`` after variable/member name after declaring to declare it as an optional member.**
+Use ``?`` **after variable/member name** after declaring to declare it as an optional member.
 ````
 const userOp: {
     firstName: string;
@@ -134,6 +134,22 @@ const userOp: {
     lastName: 'Z'
 }
 ````
-*If you hover over **middleName** in declaration, it will show ``(property) middleName?: string | undefined``*
+*If you hover over **middleName** in declaration, it will show ``(property) middleName?: string | undefined``.* Other members are taken as **required**.
+
+### Declaring literal type
+When a specific value acts as a type, it is called literal type.
+```
+const userLiteral: {
+    firstName: 'Md', // literal type
+    secondName: string;
+    middleName?: string;
+    lastName: string;
+} = {
+    firstName: 'Md',
+    secondName: 'X',
+    lastName: 'Z'
+}
+```
+
 
    

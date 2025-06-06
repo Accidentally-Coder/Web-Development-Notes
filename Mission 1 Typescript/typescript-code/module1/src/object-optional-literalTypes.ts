@@ -27,3 +27,15 @@ const userOp: {
     lastName: 'Z'
 }
 console.log(userOp);
+
+const userLiteral: {
+    firstName: 'Md',
+    secondName: string;
+    middleName?: string;
+    lastName: string;
+} = {
+    firstName: 'Md',
+    secondName: 'X',
+    lastName: 'Z'
+}
+console.log(userLiteral);

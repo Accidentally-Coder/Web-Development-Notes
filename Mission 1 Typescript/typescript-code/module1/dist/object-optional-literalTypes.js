@@ -16,3 +16,9 @@ const userOp = {
     lastName: 'Z'
 };
 console.log(userOp);
+const userLiteral = {
+    firstName: 'Md',
+    secondName: 'X',
+    lastName: 'Z'
+};
+console.log(userLiteral);

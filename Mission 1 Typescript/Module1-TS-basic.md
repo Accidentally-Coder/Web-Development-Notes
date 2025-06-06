@@ -49,7 +49,7 @@ Step 2: Run the compiled js file : ````node jsFileName.js```
 </tr>
 <tr>
 <td>
-number, string, boolean, null, undefined, symbol
+number, string, boolean, null, undefined, symbol, bigint
 </td>
 <td>
 Array, Tuple, Object
@@ -138,6 +138,10 @@ const userOp: {
 
 ### Declaring literal type
 When a specific value acts as a type, it is called literal type.
+
+or,
+
+A literal type is when a variable or property is allowed to have only a specific value. For example, "Md" is a string literal type, meaning it can only have the exact value "Md" and nothing else.
 ```
 const userLiteral: {
     firstName: 'Md', // literal type
@@ -158,7 +162,18 @@ user.firstName = 'change',
 ```
 
 ### Access Modifier
-We can use different types of access modifier, like `readonly`: 
+
+Access modifiers control the visibility of class members and help enforce encapsulation:
+
+- **public** – Members are accessible from **anywhere** (default behavior).
+
+- **private** – Members are accessible **only within the class** they are declared in.
+
+- **protected** – Members are accessible **within the class and its subclasses**.
+
+- **readonly** – **Prevents reassignment** after initialization (can be used with both classes and object types).
+
+For example, using access modifier `readonly`: 
 ```
 const userAccessModifier: {
     readonly firstName: string;

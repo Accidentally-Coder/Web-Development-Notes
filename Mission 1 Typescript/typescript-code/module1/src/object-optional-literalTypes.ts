@@ -39,3 +39,14 @@ const userLiteral: {
     lastName: 'Z'
 }
 console.log(userLiteral);
+
+console.log(user.firstName)
+
+const userAccessModifier: {
+    readonly firstName: string;
+    secondName: string;
+} = {
+    firstName: 'fixed',
+    secondName: 'X'
+}
+console.log(userAccessModifier)

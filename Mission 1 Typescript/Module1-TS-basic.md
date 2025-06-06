@@ -150,6 +150,22 @@ const userLiteral: {
     lastName: 'Z'
 }
 ```
+### Accessing property
+A property can be accessed using : `objectName.propertyName`
 
+```
+user.firstName = 'change',
+```
 
-   
+### Access Modifier
+We can use different types of access modifier, like `readonly`: 
+```
+const userAccessModifier: {
+    readonly firstName: string;
+    secondName: string;
+} = {
+    firstName: 'fixed',
+    secondName: 'X'
+}
+```
+Now, if we want to change firstName using `userAccessModifier.firstName : 'change'`, it will show error since property firstName is **readonly**.

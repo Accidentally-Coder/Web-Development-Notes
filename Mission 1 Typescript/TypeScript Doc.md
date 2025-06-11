@@ -288,3 +288,17 @@ function greetDef(name: string = "Guest"): string {
   return `Hello, ${name}`;
 }
 ```
+## Method
+A mathod is a function that is a property of an object or a class. 
+
+### Methon within an object
+```
+const person = {
+    name: 'Raha',
+    age: 24,
+    greet: function () {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+}
+person.greet();
+```

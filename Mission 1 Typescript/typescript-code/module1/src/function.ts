@@ -58,3 +58,14 @@ function greetDef(name: string = "Guest"): string {
     return `Hello, ${name}`;
 }
 console.log(greetDef());
+
+// method
+// within an object
+const person = {
+    name: 'Raha',
+    age: 24,
+    greet: function () {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+}
+person.greet();

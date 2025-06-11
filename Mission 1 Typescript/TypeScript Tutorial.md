@@ -485,5 +485,7 @@ const [, , , d, e] = numbers
 **Skips** 10, 20, 30 and **stores** `d = 40, e = 50`
 
 ### You can use rest operator
-```const [, , ...rest] = numbers```
+```
+const [, , ...rest] = numbers
+```
 Skips 10,20 and stores from 3rd to last element in an array named rest. `rest = [30,40,50,60]`

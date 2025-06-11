@@ -49,5 +49,17 @@
     // same as sum(1,2,3)
     const numbers: [number, number, number] = [1, 2, 3];
     const result = sum(...numbers);
-    console.log(result)
+    console.log(`sum with spread operator : ${result}`)
+
+    // Rest Operator
+    function sumRest(...nums: number[]): number {
+        let sum = 0;
+        nums.forEach(
+            (num) => {
+                sum = sum + num;
+            }
+        );
+        return sum;
+    }
+    console.log(`sum with rest operator : ${sumRest(1, 2, 3)}`);
 }

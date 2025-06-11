@@ -408,3 +408,24 @@ The following code with spread operator will push **individual strings** from `n
     const numbers: [number, number, number] = [1, 2, 3]; // same as sum(1,2,3)
     const result = sum(...numbers);
    ```
+## 1.7.2 Rest Operator
+The rest operator(`...`) allows a function to **accept infinite** number of **arguments** as an **array**. 
+
+### Syntax
+```
+function funcName(...args : type[]){}
+```
+
+### Example
+```
+function sumRest(...nums: number[]): number {
+    let sum = 0;
+    nums.forEach(
+        (num) => {
+            sum = sum + num;
+        }
+    );
+    return sum;
+}
+console.log(`sum with rest operator : ${sumRest(1, 2, 3)}`);
+```

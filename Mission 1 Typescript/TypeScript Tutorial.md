@@ -353,3 +353,58 @@ The following code with spread operator will push **individual strings** from `n
   console.log('subjects after spreading newSubjects:', subjects);
 
 ```
+
+### Examples
+1. Arrays:
+   
+   a. Copy an array: 
+   ```
+   const oldArray: number[] = [1,3,5];
+   const newArray:number[] = [2,4,6];
+   // copies newArray to oldArray
+   oldArray.push(...newArray);
+   ```
+   b. Merge arrays:
+   ```
+   const sub1 : string[] = ['Bangla','English','Spanish'];
+   const sub2: string[] = ['Biology','Physics','Chemistry'];
+   const sub = [...sub1, ...sub2];
+   ```
+2. Objects:
+   
+   a. Copy an object:
+   ```
+   const newObj = {...oldObj};
+   ```
+   b. Merge objects:
+   ```
+   const mergedObj = {...obj1, ...obj2};
+   ```
+   **Note : If keys conflict, later ones override the earlier ones.**
+   ```
+   const obj1: {
+        a: number;
+        b: number;
+    } = {
+        a: 1,
+        b: 2
+    };
+    const obj2: {
+        b: number;
+        c: number;
+    } = {
+        b: 4,
+        c: 10
+    };
+    const mergedObj = { ...obj1, ...obj2 }; 
+   ```
+   The above code will generate:
+   `{a : 1, b: 4, c : 10}`
+3. Function parameters
+   ```
+    function sum(a: number, b: number, c: number): number {
+        return a + b + c;
+    }
+    const numbers: [number, number, number] = [1, 2, 3]; // same as sum(1,2,3)
+    const result = sum(...numbers);
+   ```

@@ -9,4 +9,32 @@
     console.log('Initial newSubjects: ', newSubjects);
     subjects.push(...newSubjects);
     console.log('subjects after spreading newSubjects:', subjects);
+    const oldArray = [1, 3, 5];
+    const newArray = [2, 4, 6];
+    // copies newArray to oldArray
+    oldArray.push(...newArray);
+    console.log(oldArray);
+    // merge arrays
+    const sub1 = ['Bangla', 'English', 'Spanish'];
+    const sub2 = ['Biology', 'Physics', 'Chemistry'];
+    const sub = [...sub1, ...sub2];
+    console.log(sub);
+    // objects
+    const obj1 = {
+        a: 1,
+        b: 2
+    };
+    const obj2 = {
+        b: 4,
+        c: 10
+    };
+    const mergedObj = Object.assign(Object.assign({}, obj1), obj2);
+    console.log(mergedObj);
+    // function parameters
+    function sum(a, b, c) {
+        return a + b + c;
+    }
+    const numbers = [1, 2, 3];
+    const result = sum(...numbers);
+    console.log(result);
 }

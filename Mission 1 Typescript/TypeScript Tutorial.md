@@ -430,3 +430,39 @@ function sumRest(...nums: number[]): number {
 console.log(`sum with rest operator : ${sumRest(1, 2, 3)}`);
 ```
 **Note: Only one rest parameter allowed per function, and it must be the last parameter.**
+
+# 1.8 Destructuring in TypeScript
+Destructuring is a syntax allowing to **unpack** values from arrays or properties from objects into individual variables.
+
+## 1.8.1 Object Destructuring
+Let's say, the object is : 
+```
+const user = {
+        id: 1,
+        name: {
+            firstName: 'Farzana',
+            middleName: 'Reefat',
+            lastName: 'Raha'
+        },
+        email: 'abc@gmail.com',
+        country: 'Bangladesh'
+}
+```
+### Syntax 
+```
+const {property1, property2} = object;
+```
+#### Example 
+```
+const { email } = user;
+console.log(`email : ${email}`)
+```
+### For nested objects:
+```
+const {nestedObjName : {innerProperty}} = object;
+```
+#### Example
+```
+const { name: { lastName } } = user;
+console.log(`Lastname : ${lastName}`);
+```

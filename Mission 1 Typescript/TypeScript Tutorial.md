@@ -466,3 +466,24 @@ const {nestedObjName : {innerProperty}} = object;
 const { name: { lastName } } = user;
 console.log(`Lastname : ${lastName}`);
 ```
+
+## 1.8.2 Array Destructuring
+Let the array be : 
+```
+const numbers: number[] = [10, 20, 30, 40, 50, 60];
+```
+### Destructuring
+```
+const [a, b] = numbers 
+```
+Stores `a = 10, b = 20`
+
+### Skip elements
+```
+const [, , , d, e] = numbers
+```
+**Skips** 10, 20, 30 and **stores** `d = 40, e = 50`
+
+### You can use rest operator
+```const [, , ...rest] = numbers```
+Skips 10,20 and stores from 3rd to last element in an array named rest. `rest = [30,40,50,60]`

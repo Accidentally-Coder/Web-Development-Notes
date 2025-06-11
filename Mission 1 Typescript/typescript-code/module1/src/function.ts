@@ -59,7 +59,7 @@ function greetDef(name: string = "Guest"): string {
 }
 console.log(greetDef());
 
-// method
+// method : function --> object/class
 // within an object
 const person = {
     name: 'Raha',
@@ -69,3 +69,12 @@ const person = {
     }
 }
 person.greet();
+// example 2
+const oldUser = {
+    name: 'Hooman',
+    age: 0,
+    incAge(age: number): string {
+        return `New age is ${this.age + age}`;
+    }
+}
+console.log(oldUser.incAge(5));

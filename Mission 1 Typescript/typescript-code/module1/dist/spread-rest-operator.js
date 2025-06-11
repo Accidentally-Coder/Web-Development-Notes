@@ -1,0 +1,12 @@
+"use strict";
+{
+    // spread operator
+    // Arrays
+    // copy an array
+    let subjects = ['BGS', 'Bangla', 'Maths'];
+    console.log('Initial subjects : ', subjects);
+    let newSubjects = ['English', 'Biology', 'Physics'];
+    console.log('Initial newSubjects: ', newSubjects);
+    subjects.push(...newSubjects);
+    console.log('subjects after spreading newSubjects:', subjects);
+}

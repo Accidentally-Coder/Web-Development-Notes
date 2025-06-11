@@ -291,7 +291,8 @@ function greetDef(name: string = "Guest"): string {
 ## Method
 A mathod is a function that is a property of an object or a class. 
 
-### Methon within an object
+### Method within an object
+- Example 1
 ```
 const person = {
     name: 'Raha',
@@ -301,4 +302,54 @@ const person = {
     }
 }
 person.greet();
+```
+- Example 2
+```
+const oldUser = {
+    name: 'Hooman',
+    age: 0,
+    incAge(age: number): string {
+        return `New age is ${this.age + age}`;
+    }
+}
+console.log(oldUser.incAge(5));
+```
+# 1.7 Spread and Rest Operator
+## 1.7.1 Spread Operator
+The spread operator(`...`) is used to **expand elements** of an **array or object**. 
+It creates **shallow copies** and is commonly used for **copying**, **merging**, or **passing elements**.
+
+### Why do we need spread opertor?
+
+The following case can be a good example to demonstrate the necessity of spread operator:
+```
+  let subjects: string[] = ['BGS', 'Bangla', 'Maths'];
+  
+  console.log('Initial subjects : ', subjects)
+  
+  let newSubjects: string[] = ['English', 'Biology', 'Physics'];
+  
+  console.log('Initial newSubjects: ', newSubjects);
+  
+  subjects.push(newSubjects); // without spread operator
+  
+  console.log('subjects after spreading newSubjects:', subjects);
+
+```
+The above code shows an error because Array.push() expects elements of type string, but newSubjects is an entire string[] (array), not individual strings. Without the spread operator (...), it tries to push the whole array as a single element, causing a type mismatch.
+
+The following code with spread operator will push **individual strings** from `newSubjects` to `subjects`:
+```
+  let subjects: string[] = ['BGS', 'Bangla', 'Maths'];
+  
+  console.log('Initial subjects : ', subjects)
+  
+  let newSubjects: string[] = ['English', 'Biology', 'Physics'];
+  
+  console.log('Initial newSubjects: ', newSubjects);
+  
+  subjects.push(...newSubjects); // with spread operator
+  
+  console.log('subjects after spreading newSubjects:', subjects);
+
 ```

@@ -184,3 +184,107 @@ const userAccessModifier: {
 }
 ```
 Now, if we want to change firstName using `userAccessModifier.firstName : 'change'`, it will show error since property firstName is **readonly**.
+
+# 1.6 Functions in Typescript
+Functions in ts works similarly as js but comes with **type-safety** as you can define the parameter types and return type. Additionally, optional/default parameters and rest parameters can also be declared.
+
+## Types of functions declarations
+1. Named function
+2. Anonymous function
+3. Arrow function
+
+## 1. Named function
+A named function is a function that has a specific identifier.
+
+```
+function greet(name: string): string {
+    return `Hello, ${name}!`;
+}
+```
+Here, `greet` is the function name.
+
+```
+function add(a: number, b: number): number {
+    return a + b;
+}
+```
+Here, a and b are of type number, and the function returns a number.
+
+### Key Features
+- Improve code readability.
+- **Are hoisted** *(can be called before they are defined in the code).*
+- Make debugging easier, as the function name **appears in stack traces**.
+  
+## 2. Anonymous Function
+An anonymous function is a function without a name. It is often assigned to a variable or passed directly as an argument to another function.
+
+```
+const greetAnonymously = function (name: string): string {
+    return `Hello, ${name}! I am Anonymous!`;
+}
+```
+Here:
+- The function has no name after the function keyword.
+- It is assigned to the variable `greetAnonymously`, which you use to call it.
+
+### Key Features
+- Used as callback functions (e.g., in setTimeout, map, filter, etc.).
+
+- Passed as arguments to higher-order functions.
+
+**Note**: Anonymous functions are **not hoisted**, unlike named functions. So you **must declare them before using** them.
+
+## 3. Arrow Function
+An arrow function is a concise way to write function expressions using `=>`*(arrow)* syntax. It was introduced in ES6 and commonly used in JS and TS.
+### Syntax
+```
+const functionName = (parameters)=>{
+  //function body
+}
+```
+### Example
+```
+const greetArrow = (name: string): string => {
+    return `Hello, ${name}! I am gonna arrow you!`;
+}
+```
+If the function has only one return statement, you can omit curly braces and the return keyword:
+
+```
+const addArrow = (a: number, b: number): number => a + b;
+```
+
+### Key Features
+- Cannot be used as constructors.
+- Commonly used in callbacks, array methods, and functional programming.
+- Arrow functions do not have their own `this` context. They use the `this` from the surrounding scope.
+
+## Reminder :  What is callback function?
+A callback function is a function that is passed as an argument to another function, and is called/executed later.
+
+```
+function greetWithCallback(name: string, callback: () => void): void {
+    console.log(`Hello, ${name}! I am gonna call you back!`);
+    callback(); // calling the callback function
+}
+
+function sayBye(): void {
+    console.log('Goodbye!');
+}
+
+greetWithCallback('Hooman', sayBye);
+```
+## Optional paramters
+Use `?` to make a parameter optional.
+```
+function greetOpt(name: string, age?: number): string {
+  return age ? `Hello, ${name}. Age: ${age}` : `Hello, ${name}`;
+}
+```
+## Default parameters
+Set default values in the parameter list.
+```
+function greetDef(name: string = "Guest"): string {
+  return `Hello, ${name}`;
+}
+```

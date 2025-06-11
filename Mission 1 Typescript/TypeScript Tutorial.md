@@ -429,3 +429,4 @@ function sumRest(...nums: number[]): number {
 }
 console.log(`sum with rest operator : ${sumRest(1, 2, 3)}`);
 ```
+**Note: Only one rest parameter allowed per function, and it must be the last parameter.**

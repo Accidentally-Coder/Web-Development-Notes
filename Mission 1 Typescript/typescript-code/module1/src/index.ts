@@ -1,2 +1,4 @@
-let course = 'hello world'
-console.log(course)
+{
+    let course = 'hello world'
+    console.log(course)
+}
